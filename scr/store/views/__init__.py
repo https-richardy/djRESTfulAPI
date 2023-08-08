@@ -1,19 +1,19 @@
 # flake8: noqa
-from .product import (
+from .products_views import (
     ProductList, ProductDetail,
     ProductUpdate, ProductDelete,
     ProductListWithFilters, ProductCreate
 )
 
 
-from .books import (
+from .books_views import (
     BookList, BookListWithFilters,
     BookDetail, BookCreate,
     BookUpdate
 )
 
 
-from .clothings import(
+from .clothings_views import(
     ClothingList, ClothingDetail,
     ClothingUpdate, ClothingCreate,
     ClothingListWithFilters,

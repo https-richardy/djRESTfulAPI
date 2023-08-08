@@ -2,7 +2,7 @@ from pathlib import Path
 
 import os
 from dotenv import load_dotenv
-from restapi.utils import (parse_comma_list, get_env_variable)
+from core.utils import (parse_comma_list, get_env_variable)
 from datetime import timedelta
 
 load_dotenv()
@@ -53,12 +53,13 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': [
         'django_filters.rest_framework.DjangoFilterBackend',
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
     'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAdminUser',
         'rest_framework.permissions.IsAuthenticated',
     ],
-    'DEFAULT_AUTHENTICATE_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ]
 }
 
 SIMPLE_JWT = {
@@ -71,7 +72,7 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
-ROOT_URLCONF = 'restapi.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -89,7 +90,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'restapi.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 
 # Database
