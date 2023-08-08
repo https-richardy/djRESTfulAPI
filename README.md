@@ -26,7 +26,7 @@ Para executar este projeto localmente, você precisará ter o Python instalado e
     (considerando que você está na pasta raiz do projeto em "scr")
 
 * Configuração de variáveis de ambiente:  
-    Para garantir a segurança das informações sensíveis do projeto, como a chave secreta e as cedenciais do banco de dados, é comendado utilizar variáveis de ambiente em vez de armazenar essas informações diretamente no arquivo de configuração. Segue abaixo o passo a passo para configurar as variáveis de ambiente:  
+    Para garantir a segurança das informações sensíveis do projeto, como a chave secreta e as cedenciais do banco de dados, é recomendado utilizar variáveis de ambiente em vez de armazenar essas informações diretamente no arquivo de configuração. Segue abaixo o passo a passo para configurar as variáveis de ambiente:  
     * Renomeie o arquivo `.env-example` para `.env`.
     * Abra o arquivo `.env` em um editor de texto e preencha as informações necessárias.
 
