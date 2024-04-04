@@ -1,18 +1,10 @@
-# flake8: noqa
-from .category import CategorySerializer
+from typing import Sequence
 
-from .product import (
-    ProductSerializer, Product
-)
+from .category_serializer import CategorySerializer
+from .product_serializer import ProductSerializer
 
-from .books import (
-    BookSerializer, BookProduct
-)
 
-from .eletronic import (
-    EletronicSerializer, EletronicProduct
-)
-
-from .clothings import (
-    ClothingSerializer, ClothingProduct
-)
+__all__: Sequence[str] = [
+    "CategorySerializer",
+    "ProductSerializer",
+]
