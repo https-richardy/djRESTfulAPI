@@ -1,8 +1,11 @@
 from django.urls import path
-from store.views import (
-    ProductList, ProductDetail,
-    ProductUpdate, ProductDelete,
-    ProductListWithFilters, ProductCreate
+from ..views import (
+    ProductCreate,
+    ProductList,
+    ProductDetail,
+    ProductUpdate,
+    ProductDelete,
+    ProductListWithFilters,
 )
 
 urlpatterns = [
