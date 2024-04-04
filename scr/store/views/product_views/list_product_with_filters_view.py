@@ -1,11 +1,11 @@
 from rest_framework.generics import ListAPIView
+from django_filters.rest_framework import DjangoFilterBackend
 
-import django_filters
-from store.utils import (CustomPagination, ProductFilter)
-from store.serializers import (ProductSerializer, Product)
+from ...utils import (CustomPagination, ProductFilter)
+from ...serializers import ProductSerializer
+from ...models import Product
 
-
-class ProductListWithFilters(ListAPIView):
+class ListProductsWithFiltersView(ListAPIView):
     permission_classes = []
     authentication_classes = []
 
@@ -15,5 +15,5 @@ class ProductListWithFilters(ListAPIView):
     pagination_class = CustomPagination
     filterset_class = ProductFilter
     filter_backends = [
-        django_filters.rest_framework.DjangoFilterBackend
+        DjangoFilterBackend
     ]

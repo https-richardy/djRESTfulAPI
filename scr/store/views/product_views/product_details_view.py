@@ -1,8 +1,9 @@
 from rest_framework.generics import RetrieveAPIView
-from store.serializers import (ProductSerializer, Product)
 
+from ...serializers import ProductSerializer
+from ...models import Product
 
-class ProductDetail(RetrieveAPIView):
+class ProductDetailsView(RetrieveAPIView):
     permission_classes = []
     authentication_classes = []
 

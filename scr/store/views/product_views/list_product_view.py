@@ -1,10 +1,10 @@
 from rest_framework.generics import ListAPIView
 
-from store.utils import CustomPagination
-from store.serializers import (ProductSerializer, Product)
+from ...utils import CustomPagination
+from ...serializers import ProductSerializer
+from ...models import Product
 
-
-class ProductList(ListAPIView):
+class ListProductView(ListAPIView):
     permission_classes = []
     authentication_classes = []
 

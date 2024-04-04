@@ -1,20 +1,19 @@
-# flake8: noqa
-from .products_views import (
-    ProductList, ProductDetail,
-    ProductUpdate, ProductDelete,
-    ProductListWithFilters, ProductCreate
+from typing import Sequence
+
+from .product_views import (
+    CreateProductView,
+    DeleteProductView,
+    ListProductView,
+    ListProductsWithFiltersView,
+    ProductDetailsView,
+    UpdateProductView
 )
 
-
-from .books_views import (
-    BookList, BookListWithFilters,
-    BookDetail, BookCreate,
-    BookUpdate
-)
-
-
-from .clothings_views import(
-    ClothingList, ClothingDetail,
-    ClothingUpdate, ClothingCreate,
-    ClothingListWithFilters,
-)
+__all__: Sequence[str] = [
+    "CreateProductView",
+    "DeleteProductView",
+    "ListProductView",
+    "ListProductsWithFiltersView",
+    "ProductDetailsView",
+    "UpdateProductView"
+]

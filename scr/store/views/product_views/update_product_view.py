@@ -1,9 +1,10 @@
 from rest_framework.generics import UpdateAPIView
 from rest_framework import permissions
-from store.serializers import (ProductSerializer, Product)
 
+from ...serializers import ProductSerializer
+from ...models import Product
 
-class ProductUpdate(UpdateAPIView):
+class UpdateProductView(UpdateAPIView):
     permission_classes = [
         permissions.IsAdminUser,
     ]

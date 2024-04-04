@@ -1,9 +1,10 @@
 from rest_framework.generics import DestroyAPIView
 from rest_framework import permissions
-from store.serializers import (ProductSerializer, Product)
 
+from ...serializers import ProductSerializer
+from ...models import Product
 
-class ProductDelete(DestroyAPIView):
+class DeleteProductView(DestroyAPIView):
     permission_classes = [
         permissions.IsAdminUser,
     ]
