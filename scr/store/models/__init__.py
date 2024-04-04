@@ -1,9 +1,9 @@
-# flake8: noqa
+from typing import Sequence
 
 from .category import Category
 from .product import Product
 
-from .clothing_product import ClothingProduct
-from .book_product import BookProduct
-
-from .eletronic_product import EletronicProduct
+__all__: Sequence[str] = [
+    "Category",
+    "Product",
+]
